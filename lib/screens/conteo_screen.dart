@@ -5,12 +5,34 @@ class ConteoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Conteo App'),
       ),
       body: const BodyScreen(),
+      floatingActionButton: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          border: Border.all(),
+          color: colors.primary,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            FloatingActionButton(
+              onPressed: () {},
+              child: const Icon(Icons.expand_less),
+            ),
+            FloatingActionButton(
+              onPressed: () {},
+              child: const Icon(Icons.expand_more),
+            ),
+          ],
+        ),
+      ),
+      // bottomNavigationBar: ,
     );
   }
 }
@@ -27,7 +49,7 @@ class BodyScreen extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return Text('     Posición:   $index');
+                return Text(' Posición:   $index');
               },
             ),
           )
