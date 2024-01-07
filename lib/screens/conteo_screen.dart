@@ -48,8 +48,12 @@ class BodyScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
+              scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return Text(' Posición:   $index');
+                return Text(
+                  '$index',
+                  style: const TextStyle(fontSize: 40),
+                );
               },
             ),
           )
@@ -58,3 +62,5 @@ class BodyScreen extends StatelessWidget {
     );
   }
 }
+//como hacer que el código anterior produzca una salida en horizontal en flutter
+//omo hacer que el codigo anterior produzca una salida en horizontal en flutter?
