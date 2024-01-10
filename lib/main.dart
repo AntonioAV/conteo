@@ -1,4 +1,3 @@
-import 'package:conteo/screens/conteo_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -21,7 +20,6 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Conteo',
-      home: ConteoScreen(),
     );
   }
 }
