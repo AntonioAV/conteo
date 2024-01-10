@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
+import 'package:conteo/src/pages/home_page.dart';
+
 void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
-  const MyApp({
-    super.key,
-  });
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // final List numbers = [];
-  int number = 0;
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    // ignore: prefer_const_constructors
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Conteo',
+      title: 'Material App',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+      ),
+      initialRoute: 'home',
+      routes: {
+        'home': (context) => const HomePage(),
+      },
     );
   }
 }
