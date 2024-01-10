@@ -9,10 +9,34 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Título...'),
+        centerTitle: true,
+        title: const Padding(
+          padding: EdgeInsets.all(20),
+          child: Text('ADIVINAR CANTIDAD'),
+        ),
       ),
       body: const Center(
-        child: Text('Contenido...'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Card(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                child: Text(
+                  'Cantidad a adivinar',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              '18',
+              style: TextStyle(fontSize: 60),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: const MyFloatingBottom(),
     );
