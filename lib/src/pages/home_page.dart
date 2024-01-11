@@ -1,3 +1,4 @@
+import 'package:conteo/src/widgets/cantidad_adivinar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:conteo/src/widgets/my_floatingbottom.dart';
@@ -31,10 +32,7 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Text(
-              '18',
-              style: TextStyle(fontSize: 60),
-            ),
+            CantidadAdivinar(),
           ],
         ),
       ),
